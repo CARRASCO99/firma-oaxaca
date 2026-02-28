@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIRMA LEGAL DIGITAL "LEGAL-TECH" OAXACA | Inicio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { --primary: #05070a; --accent: #d4af37; --bg-dark: #0a0e14; --text: #f4f7f9; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            background: var(--primary) !important; 
+            color: var(--text); 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6;
+        }
+
+        /* BARRA DE NAVEGACIÓN */
+        header { 
+            background: rgba(5, 7, 10, 0.98); 
+            padding: 15px 8%; 
+            display: flex; justify-content: space-between; align-items: center;
+            position: fixed; top: 0; width: 100%; z-index: 1000;
+            border-bottom: 1px solid var(--accent);
+            backdrop-filter: blur(10px);
+        }
+        .logo-container { display: flex; align-items: center; gap: 15px; }
+        .logo-img { height: 50px; }
+        .brand-name { font-weight: bold; font-size: 1.2rem; letter-spacing: 1px; }
+
+        nav a { 
+            color: #fff; text-decoration: none; margin-left: 25px; 
+            font-size: 0.85rem; font-weight: bold; text-transform: uppercase; 
+            transition: 0.3s;
+        }
+        nav a:hover { color: var(--accent); }
+
+        /* SECCIÓN HERO (BIENVENIDA) */
+        .hero { 
+            height: 75vh;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                        url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover; background-position: center;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            text-align: center; padding: 0 20px;
+        }
+        .hero h1 { font-size: 3.5rem; color: var(--accent); margin-bottom: 20px; text-transform: uppercase; }
+        .hero p { font-size: 1.2rem; max-width: 800px; color: #ccc; }
+
+        /* SECCIÓN PRESENTACIÓN */
+        .titular-section { padding: 100px 10%; text-align: center; background: var(--bg-dark); }
+        .titular-nombre { color: var(--accent); font-size: 2.5rem; font-weight: bold; margin-bottom: 10px; }
+        .titular-sub { color: #888; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 60px; font-size: 0.9rem; }
+
+        .cards-flex { 
+            display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; 
+        }
+        .tarjeta-img { 
+            max-width: 500px; width: 100%; border: 1px solid rgba(212, 175, 55, 0.4);
+            border-radius: 15px; box-shadow: 0 20px 50px rgba(0,0,0,0.6); 
+            transition: 0.5s ease;
+        }
+        .tarjeta-img:hover { 
+            transform: translateY(-15px) scale(1.02); 
+            border-color: var(--accent); 
+            box-shadow: 0 25px 60px rgba(212, 175, 55, 0.15);
+        }
+
+        /* BOTONES FLOTANTES */
+        .float-btn { 
+            position: fixed; right: 30px; width: 65px; height: 65px; border-radius: 50%; 
+            display: flex; justify-content: center; align-items: center; 
+            font-size: 32px; color: white; text-decoration: none; z-index: 2000; 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5); transition: 0.3s; 
+        }
+        .wa { bottom: 30px; background: #25d366; }
+        .fb { bottom: 110px; background: #1877f2; }
+        .float-btn:hover { transform: scale(1.15) rotate(5deg); }
+
+        /* FOOTER MAESTRO */
+        footer { 
+            background: #000; padding: 60px 20px; border-top: 1px solid #222; 
+            text-align: center; color: #555;
+        }
+        .footer-nav { margin-bottom: 30px; }
+        .footer-nav a { color: #888; text-decoration: none; margin: 0 15px; font-size: 0.9rem; }
+        .footer-nav a:hover { color: var(--accent); }
+        .legal-links { margin-top: 20px; font-size: 0.75rem; }
+        .legal-links a { color: #444; text-decoration: none; margin: 0 10px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="LOGO_LEGAL_TECH.png" alt="Logo" class="logo-img">
+        <div class="brand-name">FIRMA LEGAL DIGITAL"LEGAL-TECH" OAXACA</div>
+    </div>
+    <nav>
+        <a href="index.html" style="color: var(--accent);">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="planes.html">Planes</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Excelencia Jurídica, Eficiencia Digital</h1>
+    <p>Especialistas en temas Familiares, Constitucionales y Administrativos. Optimizamos la gestión legal con Microsoft 365.</p>
+</section>
+
+<section class="titular-section">
+    <h2 class="titular-nombre">LIC. DANIEL CARRASCO ENRÍQUEZ</h2>
+    <p class="titular-sub">Titular de la Firma "Legal-Tech"</p>
+    
+    <div class="cards-flex">
+        <img src="TARJETA_PRESENTACION_LEGAL_TECH_FRENTE.png" alt="Tarjeta Frente" class="tarjeta-img">
+        <img src="TARJETA_PRESENTACION_LEGALTECH_TRASERA.png" alt="Tarjeta Reverso" class="tarjeta-img">
+    </div>
+</section>
+
+<a href="https://www.facebook.com/share/1AZpcZQ8YC/" class="float-btn fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://wa.me/9519408062" class="float-btn wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<footer>
+    <div class="footer-nav">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="planes.html">Planes</a>
+        <a href="contacto.html">Contacto</a>
+    </div>
+    <p>&copy; 2026 Firma Legal Digital "Legal-Tech" | Oaxaca de Juárez, Oax.</p>
+    <div class="legal-links">
+        <a href="privacidad.html">Aviso de Privacidad</a>
+        <a href="certificados.html">Certificados y Derechos</a>
+    </div>
+</footer>
+
+</body>
+</html>
