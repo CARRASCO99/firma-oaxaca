@@ -1,10 +1,16 @@
+Aquí tienes el código completo y corregido para tu archivo contacto.html. He integrado tu ID de Formspree (xaqdzeda), ajustado el botón para que use tus estilos de CSS y corregido la ruta del logo para que funcione en internet.
+
+HTML
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto | FIRMA LEGAL DIGITAL"LEGAL-TECH" OAXACA</title>
+    <title>Contacto | FIRMA LEGAL DIGITAL "LEGAL-TECH" OAXACA</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <meta property="og:image" content="https://carrasco99.github.io/firma-oaxaca/img/TARJETA_PRESENTACION_LEGALTECH_FRENTE.png">
+    
     <style>
         :root { --primary: #05070a; --accent: #d4af37; --bg-card: #111821; --text: #f4f7f9; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -60,15 +66,17 @@
 
 <header>
     <div style="display:flex; align-items:center; gap:15px;">
-        <img src="D:\LEGAL_TECH\LOGO_LEGAL_TECH.png" style="height:45px;">
-        <div style="font-weight:bold; color:white;">FIRMA LEGAL DIGITAL"LEGAL-TECH" OAXACA</div>
+        <img src="img/LOGO_LEGAL_TECH.png" style="height:45px;">
+        <div style="font-weight:bold; color:white;">FIRMA LEGAL DIGITAL "LEGAL-TECH" OAXACA</div>
     </div>
-<nav style="display: flex; gap: 20px; align-items: center;">
-    <a href="index.html" style="color: var(--gold); font-weight: bold;">INICIO</a>
-    <a href="servicios.html">SERVICIOS</a>
-    <a href="planes.html">PLANES</a>
-    <a href="certificados.html">CERTIFICADOS</a> <a href="privacidad.html">PRIVACIDAD</a>     <a href="contacto.html">CONTACTO</a>
-</nav>
+    <nav style="display: flex; gap: 20px; align-items: center;">
+        <a href="index.html">INICIO</a>
+        <a href="servicios.html">SERVICIOS</a>
+        <a href="planes.html">PLANES</a>
+        <a href="certificados.html">CERTIFICADOS</a> 
+        <a href="privacidad.html">PRIVACIDAD</a>
+        <a href="contacto.html" style="color: var(--accent); font-weight: bold;">CONTACTO</a>
+    </nav>
 </header>
 
 <div class="container">
@@ -97,7 +105,8 @@
                 </div>
             </div>
         </div>
-<div class="form-panel">
+
+        <div class="form-panel">
             <h3>Consulta Legal-Tech</h3>
             <form action="https://formspree.io/f/xaqdzeda" method="POST">
                 <div class="form-group">
@@ -126,9 +135,11 @@
                     </select>
                 </div>
                 
-                <button type="submit" class="btn-gold">Enviar Consulta</button>
+                <button type="submit" class="btn-submit">Enviar Consulta</button>
             </form>
- </div>
+        </div>
+    </div>
+</div>
 
 <a href="https://www.facebook.com/share/1AZpcZQ8YC/" class="float-btn fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
 <a href="https://wa.me/9519408062" class="float-btn wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
@@ -142,7 +153,7 @@
 </footer>
 
 </body>
-
 </html>
+
 
 
