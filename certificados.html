@@ -1,63 +1,191 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certificados y Derechos | FIRMA LEGAL DIGITAL"LEGAL-TECH" OAXACA</title>
+    <title>Certificados y Derechos | LEGAL-TECH OAXACA</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --primary: #05070a; --accent: #d4af37; --bg-dark: #0a0e14; --text: #f4f7f9; }
-        html, body { background-color: var(--primary) !important; margin: 0; padding: 0; color: var(--text); font-family: 'Segoe UI', sans-serif; }
+        :root { 
+            --primary: #05070a; 
+            --accent: #d4af37; 
+            --bg-dark: #0a0e14; 
+            --text: #f4f7f9; 
+            --glass: rgba(5, 7, 10, 0.95);
+        }
         
+        body { 
+            background-color: var(--primary); 
+            margin: 0; padding: 0; 
+            color: var(--text); 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6;
+        }
+        
+        /* HEADER REFACTORIZADO Y CONSISTENTE */
         header { 
-            background: rgba(5, 7, 10, 0.98); padding: 15px 8%; display: flex; 
-            justify-content: space-between; align-items: center; position: fixed; 
-            top: 0; width: 100%; z-index: 1000; border-bottom: 1px solid var(--accent); box-sizing: border-box;
+            background: var(--glass); 
+            backdrop-filter: blur(10px);
+            padding: 12px 6%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            position: fixed; 
+            top: 0; width: 100%; 
+            z-index: 2000; 
+            border-bottom: 1.5px solid var(--accent); 
+            box-sizing: border-box;
         }
 
-        nav a { color: #fff; text-decoration: none; margin-left: 25px; font-weight: bold; text-transform: uppercase; font-size: 0.85rem; }
+        .logo-brand { 
+            display: flex; 
+            align-items: center; 
+            gap: 15px; 
+            text-decoration: none;
+        }
         
-        .content { padding: 120px 10% 60px; text-align: center; }
-        h1 { color: var(--accent); margin-bottom: 40px; }
+        .logo-brand img { 
+            height: 48px; 
+            width: auto; 
+        }
 
-        .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .cert-card { background: #111821; padding: 30px; border-radius: 12px; border: 1px solid #333; transition: 0.3s; }
-        .cert-card:hover { border-color: var(--accent); }
-        .cert-card i { font-size: 3rem; color: var(--accent); margin-bottom: 20px; }
+        .logo-text {
+            color: var(--accent);
+            font-weight: 800;
+            font-size: 0.9rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        nav { display: flex; gap: 25px; }
+
+        nav a { 
+            color: #ffffff; 
+            text-decoration: none; 
+            font-size: 0.8rem; 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            letter-spacing: 1px;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        nav a:hover { color: var(--accent); }
         
-        .legal-notice { margin-top: 60px; text-align: justify; background: rgba(255,255,255,0.03); padding: 30px; border-left: 4px solid var(--accent); }
-        
-        footer { padding: 40px; text-align: center; border-top: 1px solid #222; color: #555; }
+        /* CONTENIDO PRINCIPAL */
+        .content { 
+            padding: 160px 10% 80px; 
+            text-align: center; 
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 { 
+            color: var(--accent); 
+            margin-bottom: 50px; 
+            font-size: 2.5rem; 
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* GRID DE CERTIFICADOS PROFESIONAL */
+        .cert-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px; 
+            margin-bottom: 60px; 
+        }
+
+        .cert-card { 
+            background: #111821; 
+            padding: 40px; 
+            border-radius: 15px; 
+            border: 1px solid #222; 
+            transition: 0.4s ease; 
+        }
+
+        .cert-card:hover { 
+            border-color: var(--accent); 
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .cert-card i { 
+            font-size: 3.5rem; 
+            color: var(--accent); 
+            margin-bottom: 25px; 
+        }
+
+        /* BLOQUE FEDERAL CENTRADO Y MAESTRO */
+        .federal-container {
+            display: flex; 
+            justify-content: center; 
+            width: 100%; 
+            margin: 60px 0;
+        }
+
+        .federal-content {
+            background: rgba(212, 175, 55, 0.08); 
+            border: 2px solid var(--accent); 
+            padding: 50px; 
+            border-radius: 20px; 
+            max-width: 1000px; 
+            width: 100%; 
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+        }
+
+        .federal-grid {
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        /* NOTA LEGAL */
+        .legal-notice { 
+            margin-top: 80px; 
+            text-align: justify; 
+            background: rgba(255,255,255,0.03); 
+            padding: 40px; 
+            border-left: 5px solid var(--accent); 
+            border-radius: 0 15px 15px 0;
+        }
+
+        /* FOOTER REFACTORIZADO (SIN REDES SOCIALES) */
+        footer { 
+            background: #000; 
+            padding: 60px 20px; 
+            border-top: 1px solid #222; 
+            text-align: center; 
+            color: #777; 
+        }
+
+        footer a { 
+            color: #bbb; 
+            text-decoration: none; 
+            font-size: 0.9rem; 
+            transition: 0.3s;
+        }
+
+        footer a:hover { color: var(--accent); }
     </style>
 </head>
 <body>
 
-<<footer style="background: #000; padding: 60px 20px 30px; border-top: 1px solid #222; text-align: center; color: #777; font-family: 'Segoe UI', sans-serif;">
-    
-    <div style="margin-bottom: 30px;">
-        <img src="D:\LEGAL_TECH\LOGO_LEGAL_TECH.png" alt="Logo" style="height: 40px; opacity: 0.6; filter: grayscale(100%);">
-        <p style="color: #d4af37; font-weight: bold; letter-spacing: 1px; margin-top: 10px;">FIRMA LEGAL DIGITAL"LEGAL-TECH" OAXACA</p>
-    </div>
-
-    <div style="display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; margin-bottom: 30px;">
-        <a href="index.html" style="color: #bbb; text-decoration: none; font-size: 0.9rem;">Inicio</a>
-        <a href="servicios.html" style="color: #bbb; text-decoration: none; font-size: 0.9rem;">Servicios</a>
-        <a href="planes.html" style="color: #bbb; text-decoration: none; font-size: 0.9rem;">Planes</a>
-        <a href="contacto.html" style="color: #bbb; text-decoration: none; font-size: 0.9rem;">Contacto</a>
-    </div>
-
-    <hr style="border: 0; border-top: 1px solid #111; width: 60%; margin: 0 auto 30px;">
-
-    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 20px;">
-        <a href="privacidad.html" style="color: #666; text-decoration: none; font-size: 0.8rem; border: 1px solid #333; padding: 5px 12px; border-radius: 3px;">Aviso de Privacidad</a>
-        <a href="certificados.html" style="color: #666; text-decoration: none; font-size: 0.8rem; border: 1px solid #333; padding: 5px 12px; border-radius: 3px;">Certificados y Derechos</a>
-    </div>
-
-    <p style="font-size: 0.8rem;">&copy; 2026 Firma Legal Digital "Legal-Tech" | Lic. Daniel Carrasco Enríquez</p>
-    <p style="font-size: 0.7rem; margin-top: 5px; opacity: 0.5;">Oaxaca de Juárez, Oax., Protegido por infraestructura Microsoft 365.</p>
-
-</footer>
+<header>
+    <a href="index.html" class="logo-brand">
+        <img src="LOGO_LEGAL_TECH.png" alt="Logo Legal-Tech">
+        <span class="logo-text">Legal-Tech Oaxaca</span>
+    </a>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="planes.html">Planes</a>
+        <a href="certificados.html" style="color: var(--accent);">Certificados</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+</header>
 
 <section class="content">
     <h1>Certificaciones y Derechos Reservados</h1>
@@ -65,31 +193,70 @@
     <div class="cert-grid">
         <div class="cert-card">
             <i class="fas fa-shield-halved"></i>
-            <h3>Seguridad de la Información</h3>
-            <p>Infraestructura protegida por <strong>Microsoft Defender</strong> y cifrado de punta a punta en OneDrive for Business.</p>
+            <h3>Seguridad de Datos</h3>
+            <p>Operamos bajo infraestructura <strong>Microsoft 365 Business</strong>, garantizando cifrado de grado militar y protección mediante Microsoft Defender.</p>
         </div>
 
         <div class="cert-card">
             <i class="fas fa-copyright"></i>
             <h3>Propiedad Intelectual</h3>
-            <p>La marca <strong>FIRMA LEGAL DIGITAL "LEGAL-TECH" OAXACA</strong> y su logotipo son propiedad exclusiva del Lic. Daniel Carrasco Enríquez.</p>
+            <p>La marca <strong>LEGAL-TECH OAXACA</strong> y sus metodologías digitales son propiedad exclusiva del Lic. Daniel Carrasco Enríquez.</p>
         </div>
 
         <div class="cert-card">
             <i class="fas fa-gavel"></i>
             <h3>Cédula Profesional</h3>
-            <p>Firma legalmente constituida con Registro ante la Dirección General de Profesiones para el ejercicio del Derecho.</p>
+            <p>Firma legalmente constituida y acreditada ante la Dirección General de Profesiones para el ejercicio del Derecho en México.</p>
+        </div>
+    </div>
+
+    <div class="federal-container">
+        <div class="federal-content">
+            <h3 style="color: var(--accent); letter-spacing: 3px; margin-bottom: 10px; text-transform: uppercase;">
+                <i class="fas fa-fingerprint"></i> INFRAESTRUCTURA LEGAL FEDERAL
+            </h3>
+            <p style="color: #bbb; font-style: italic; margin-bottom: 30px;">Habilitados para el ejercicio jurídico en la era digital.</p>
+            
+            <div class="federal-grid">
+                <div>
+                    <i class="fas fa-key" style="color: var(--accent); font-size: 2rem; margin-bottom: 15px;"></i>
+                    <p><strong>Clave e-Firma (SAT)</strong><br>Vigente para suscripción de documentos y actos jurídicos federales.</p>
+                </div>
+                <div>
+                    <i class="fas fa-landmark" style="color: var(--accent); font-size: 2rem; margin-bottom: 15px;"></i>
+                    <p><strong>Juzgados de Distrito</strong><br>Acceso y representación en tribunales de Oaxaca y Ciudad de México.</p>
+                </div>
+                <div>
+                    <i class="fas fa-shield-alt" style="color: var(--accent); font-size: 2rem; margin-bottom: 15px;"></i>
+                    <p><strong>Llaves Federales</strong><br>Habilitadas para litigio en línea y consulta de expedientes electrónicos.</p>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="legal-notice">
-        <h2>Aviso de Derechos de Autor</h2>
-        <p>Queda prohibida la reproducción total o parcial del contenido de este sitio web, así como el uso de las metodologías de organización digital FIRMA LEGAL DIGITAL"LEGAL-TECH" OAXACA sin la autorización previa por escrito del titular. Todos los documentos, flujos de trabajo y plantillas compartidas durante las asesorías están protegidos por las leyes de derecho de autor vigentes en México.</p>
+        <h2 style="color: var(--accent); margin-top: 0;">Aviso de Derechos de Autor</h2>
+        <p>Queda estrictamente prohibida la reproducción total o parcial del contenido de este sitio web, así como el uso de las metodologías de organización digital de <strong>LEGAL-TECH OAXACA</strong> sin autorización previa. Todos los documentos y flujos de trabajo están protegidos por las leyes de propiedad intelectual vigentes en México.</p>
     </div>
 </section>
 
 <footer>
-    <p>&copy; 2026 Firma Legal Digital "Legal-Tech" | Todos los derechos reservados.</p>
+    <div style="margin-bottom: 30px;">
+        <img src="LOGO_LEGAL_TECH.png" alt="Logo" style="height: 45px; opacity: 0.7;">
+        <p style="color: var(--accent); font-weight: bold; margin-top: 10px; letter-spacing: 1px;">FIRMA LEGAL DIGITAL "LEGAL-TECH" OAXACA</p>
+    </div>
+    
+    <div style="margin-bottom: 30px; display: flex; justify-content: center; gap: 20px;">
+        <a href="index.html">Inicio</a> | 
+        <a href="servicios.html">Servicios</a> | 
+        <a href="planes.html">Planes</a> | 
+        <a href="contacto.html">Contacto</a>
+    </div>
+
+    <hr style="border: 0; border-top: 1px solid #111; width: 50%; margin: 0 auto 30px;">
+
+    <p style="font-size: 0.85rem; margin: 0;">&copy; 2026 Firma Legal Digital "Legal-Tech" | Lic. Daniel Carrasco Enríquez</p>
+    <p style="font-size: 0.75rem; margin-top: 10px; opacity: 0.5;">Oaxaca de Juárez, Oax. | Protegido por Microsoft 365 Legal Cloud.</p>
 </footer>
 
 </body>
